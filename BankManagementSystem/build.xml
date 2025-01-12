@@ -1,4 +1,20 @@
 <project name="BankManagementSystem" default="run" basedir=".">
+    <path id="project.classpath">
+    <!-- Read classpath entries from .classpath file -->
+        <filelist file=".classpath"/>
+    </path>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="false">
+            <classpath refid="project.classpath"/>
+        </javac>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="com.bank.Main" fork="true">
+            <classpath refid="project.classpath"/>
+        </java>
+    </target>
     <!-- Set global properties -->
     <property name="src.dir" value="src" />
     <property name="build.dir" value="build" />

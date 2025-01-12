@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <!-- Include the bin directory for compiled files -->
+    <classpathentry kind="output" path="bin"/>
+    <!-- Include the JCalendar JAR -->
+    <classpathentry kind="lib" path="lib/jcalendar-1.4.jar"/>
+</classpath>
